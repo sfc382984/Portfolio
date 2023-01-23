@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "meiryo";
+}
+
+body{
+  background-image: url(img/Back_omikuji_pixabay_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.app-header-contents {
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.mask{
+  background-color: rgba(255,255,255,0.5);
+  height: 100%;
+}
+
+.start-button {
+  width: 150px;
+  margin: 10px auto;
+  padding: 8px;
+  border : 2px solid #f5f3f2;
+  border-radius: 8px;
+  background-color:rgb(255, 255, 255);
+  box-shadow :-2px -2px 2px #999 inset;
+  color: rgb(0, 0, 0);
+}
+
+.start-button:hover {
+  background-color: #1a0b08;
+  color: white;
+}
+
+.start-button:active{
+  box-shadow: 2px 2px 2px #999 inset;
+  color: transparent;
+  text-shadow: 2px 2px 0px #666;
+}
+
+.result {
+  margin-top: 50px;
+  display: none;
+}
+
+div.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.row .radius {
+  height: 300px;
+  width: 300px;
+  margin: 30px;
+}
+
+div.row .title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 3px;
+}
+
+div.row .stars {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.row .detail {
+  margin-left: 18px;
+  margin-right: 18px;
+  text-align: center;
+}
+
+div.row .radius.money {
+  border :2px solid yellow;
+  border-radius: 50%;
+  background-color: rgba(255,242,178,0.5);
+}
+
+div.row .radius.work {
+  border :2px solid green;
+  border-radius: 50%;
+  background-color: rgba(211,233,208,0.5);
+}
+
+div.row .radius.health {
+  border :2px solid aqua;
+  border-radius: 50%;
+  background-color: rgba(234,246,253,0.5);
+}
+
+footer{
+  background-color: #1a0b08;
+  color: #f5f3f2;
+  text-align: center;
+  width: 100%;
+  padding: 5px 0;
+  position: absolute;
+  bottom: 0;
+}
