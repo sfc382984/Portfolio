@@ -72,7 +72,7 @@
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">おみくじアプリ</h4>
-              <h6 class="card-subtitle">hikari kurosaka</h6>
+              <h6 class="card-subtitle">くろぴ</h6>
               <p class="card-text">
                 これは、HTML, CSS, JavaScript, jQueryを使い制作しました。
               </p>
@@ -145,7 +145,7 @@
                   お名前
                 </label>
                 <div class="col-lg-10">
-                  <input type="name" class="form-control" id="inputname3" placeholder="Name">
+                  <input type="name" class="form-control" id="inputName3" placeholder="Name">
                 </div>
               </div>
               <div class="row md-3 contact-row">
@@ -161,7 +161,7 @@
                   お電話番号
                 </label>
                 <div class="col-lg-10">
-                  <input type="tel" class="form-control" id="inputPassword3" placeholder="Tel">
+                  <input type="tel" class="form-control" id="inputTel3" placeholder="Tel">
                 </div>
               </div>
               <!-- ラジオボタンのコード -->
@@ -192,7 +192,7 @@
                 <div class="row mb-3 contact-row">
                   <label for="inputorder3" class="col-lg-2 col-form-label"></label>
                   <div class="col-lg-10">
-                    <textarea class="form-control" id="inputorder3" placeholder="Order"></textarea>
+                    <textarea class="form-control" id="inputOrder3" placeholder="Order"></textarea>
                   </div>
                 </div>
               </fieldset>
@@ -211,13 +211,10 @@
                 </div>
                 <div class="col-lg-2">
                   <div class="row">
-                    <button type="submit" class="btn">Send</button>
+                    <button type="button" class="btn" id="sendbutton">Send</button>
                   </div>
                 </div>
               </div>
-              <p>※まだクリックアクション実装できていません。
-                お問い合わせはTwitterのDMからお願いいたします。</p>
-              <a href="https://twitter.com/sfc382984">Twitterはこちらから</a>
             </form>
           </div>
           <div class="mb-xxl-3"></div>
@@ -230,12 +227,11 @@
   </div>
 
 
-<!-- firebase　ここから
-  <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js"></script>
   <script type="module">
 
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+    import {getDatabase, ref, push} from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
 
     const firebaseConfig = {
       apiKey: "AIzaSyAf2OrVgapFBiReqsPktv0LXg672OrcEtY",
@@ -249,11 +245,23 @@
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
-    console.log(app);
     const analytics = getAnalytics(app);
+    const db = getDatabase();
+    const sendbutton = document.getElementById("sendbutton")
+    sendbutton.onclick = function(){
+      const inputname = document.getElementById("inputName3").value
+      const inputemail = document.getElementById("inputEmail3").value
+      const inputtel = document.getElementById("inputTel3").value
+      const inputradio = document.getElementById("gridRadios1, gridRadios2, gridRadios3").value
+      const inputorder = document.getElementById("inputOrder3").value
 
-    //
+      push(ref(db, 'contact'), {name: inputname, mailAddress: inputemail, tel: inputtel, radio: inputradio, order: inputorder})
+
+      console.log(2)
+
+    }
+
   </script>
-ここまでfirebase　挿入予定 -->
+
 </body>
 </html>

@@ -51,9 +51,9 @@ body{
   display: none;
 }
 
-div.row {
+.result-row{
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 div.row .radius {
