@@ -252,7 +252,13 @@
       const inputname = document.getElementById("inputName3").value
       const inputemail = document.getElementById("inputEmail3").value
       const inputtel = document.getElementById("inputTel3").value
-      const inputradio = document.getElementById("gridRadios1, gridRadios2, gridRadios3").value
+      const radios = document.getElementsByName("gridRadios");
+        let checkedValue = "";
+        for (const radio of radios) {
+          if (radio.checked){
+            checkedValue = radio.value
+          }
+        }
       const inputorder = document.getElementById("inputOrder3").value
 
       push(ref(db, 'contact'), {name: inputname, mailAddress: inputemail, tel: inputtel, radio: inputradio, order: inputorder})
