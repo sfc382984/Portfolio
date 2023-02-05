@@ -122,6 +122,8 @@
         $(this).toggleClass('js-fortune-start');
         $(this).text('もう一度占う');
 
+        $("footer").css("position","relative");
+
       });
 
       // 「もう一度占う！」ボタンを押下した場合は「result」クラスの「div」を非表示にする
@@ -132,6 +134,11 @@
         $(this).toggleClass('js-fortune-start');
 
         $(this).text('運勢を占う！');
+
+        $("footer").css({
+          "position": "absolute",
+          "bottom": "0"
+        });
 
       });
 

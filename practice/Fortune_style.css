@@ -1,5 +1,4 @@
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "meiryo";
@@ -53,6 +52,7 @@ body{
 
 .result-row{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 

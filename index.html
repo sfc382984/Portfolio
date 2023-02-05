@@ -261,9 +261,10 @@
         }
       const inputorder = document.getElementById("inputOrder3").value
 
-      push(ref(db, 'contact'), {name: inputname, mailAddress: inputemail, tel: inputtel, radio: inputradio, order: inputorder})
+      push(ref(db, 'contact'), {name: inputname, mailAddress: inputemail, tel: inputtel, radio: checkedValue, order: inputorder})
 
-      console.log(2)
+      console.log("You have successfully sent date!")
+      alert('Thanks for your order!')
 
     }
 
