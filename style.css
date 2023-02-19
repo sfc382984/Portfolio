@@ -167,6 +167,10 @@ section{
   color: #fff5e0;
 }
 
+.twitter-timeline{
+  margin: 0 auto;
+  width: 75%;
+}
 
 /* Contact */
 .col-form-label{
@@ -207,6 +211,9 @@ footer{
     flex-direction: column;
   }
   .card{
+    width: 100%;
+  }
+  .twitter-timeline{
     width: 100%;
   }
 }
